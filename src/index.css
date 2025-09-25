@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Professional color palette */
+    --background: 220 20% 97%;
+    --foreground: 220 20% 10%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+    
+    /* Primary - Professional blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 55%;
+    --primary-light: 217 91% 95%;
+    
+    /* Secondary - Slate gray */
+    --secondary: 215 20% 65%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 20% 40%;
+    
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 217 91% 60%;
+    
+    --radius: 0.5rem;
+    
+    /* Gantt chart task colors - vibrant palette for light mode */
+    --task-todo: 220 85% 55%; /* Bright blue */
+    --task-in-progress: 38 95% 50%; /* Vibrant orange */
+    --task-done: 142 70% 40%; /* Bright green */
+    --task-blocked: 0 80% 55%; /* Bright red */
+    --task-review: 280 75% 60%; /* Purple */
+    --task-default: 200 75% 50%; /* Default bright blue */
+    
+    /* Connection lines */
+    --connection-line: 215 40% 60%; /* Connection line color */
+    
+    /* Gantt specific */
+    --gantt-grid: 215 20% 93%;
+    --gantt-weekend: 215 20% 96%;
+    --gantt-today: 217 91% 60%;
+    --gantt-dependency: 217 50% 70%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 20% 97%), hsl(220 20% 94%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsl(220 20% 10% / 0.05);
+    --shadow-md: 0 4px 6px hsl(220 20% 10% / 0.07);
+    --shadow-lg: 0 10px 15px hsl(220 20% 10% / 0.1);
+    --shadow-xl: 0 20px 25px hsl(220 20% 10% / 0.1);
+    
+    /* Animations */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 10%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 96%;
+    --sidebar-accent-foreground: 220 20% 10%;
+    --sidebar-border: 215 20% 90%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 220 20% 98%;
+    
+    --card: 220 20% 14%;
+    --card-foreground: 220 20% 98%;
+    
+    --popover: 220 20% 14%;
+    --popover-foreground: 220 20% 98%;
+    
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 20% 10%;
+    --primary-hover: 217 91% 65%;
+    --primary-light: 217 30% 20%;
+    
+    --secondary: 215 20% 35%;
+    --secondary-foreground: 220 20% 98%;
+    
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 20% 60%;
+    
+    --accent: 262 83% 58%;
+    --accent-foreground: 220 20% 98%;
+    
+    --destructive: 0 62% 48%;
+    --destructive-foreground: 220 20% 98%;
+    
+    --border: 215 20% 22%;
+    --input: 215 20% 22%;
+    --ring: 217 91% 60%;
+    
+    /* Gantt chart task colors - vibrant palette */
+    --task-todo: 220 90% 60%; /* Bright blue */
+    --task-in-progress: 45 95% 55%; /* Vibrant yellow/orange */
+    --task-done: 142 76% 45%; /* Bright green */
+    --task-blocked: 0 85% 60%; /* Bright red */
+    --task-review: 280 85% 65%; /* Purple */
+    --task-default: 200 80% 55%; /* Default bright blue */
+    
+    /* Connection lines */
+    --connection-line: 215 30% 50%; /* Connection line color */
+    
+    --gantt-grid: 215 20% 18%;
+    --gantt-weekend: 215 20% 15%;
+    --gantt-today: 217 91% 60%;
+    --gantt-dependency: 217 50% 50%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 20% 14%), hsl(220 20% 12%));
+    
+    --shadow-sm: 0 1px 2px hsl(220 20% 0% / 0.1);
+    --shadow-md: 0 4px 6px hsl(220 20% 0% / 0.15);
+    --shadow-lg: 0 10px 15px hsl(220 20% 0% / 0.2);
+    --shadow-xl: 0 20px 25px hsl(220 20% 0% / 0.25);
+    
+    --sidebar-background: 220 20% 14%;
+    --sidebar-foreground: 220 20% 90%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 220 20% 90%;
+    --sidebar-border: 215 20% 22%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+}
+
+@layer utilities {
+  .gantt-grid-pattern {
+    background-image: repeating-linear-gradient(
+      90deg,
+      hsl(var(--gantt-grid)),
+      hsl(var(--gantt-grid)) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  }
+  
+  .bg-gantt-weekend {
+    background-color: hsl(var(--gantt-weekend));
+  }
+  
+  .task-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
