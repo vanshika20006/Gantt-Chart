@@ -1,9 +1,11 @@
-Got it ✅ I’ll help you create a professional, engaging, and informative **README.md** for your Gantt Chart project. Here’s a suggested draft in markdown format with sections, emojis, and GitHub best practices:
+
 
 ```markdown
 # 📊 Gantt Chart
 
-A simple and interactive **Gantt Chart** implementation that helps visualize project tasks, timelines, and dependencies in an intuitive way. This project is useful for project management, scheduling, and tracking progress over time.
+An interactive **Gantt Chart application** built with **React, Vite, and Supabase**.  
+It helps visualize project tasks, timelines, and dependencies in an intuitive way.  
+This project is useful for project management, scheduling, and tracking progress over time.
 
 ---
 
@@ -11,61 +13,121 @@ A simple and interactive **Gantt Chart** implementation that helps visualize pro
 
 - 📅 Create and manage tasks with start and end dates  
 - 🔗 Define dependencies between tasks  
-- 🎨 Clean and interactive UI for easy visualization  
-- ⚡ Lightweight and beginner-friendly implementation  
-- 🛠️ Easy to customize for your own project needs  
+- 🎨 Clean and interactive UI (built with React + shadcn/ui)  
+- ⚡ Fast development powered by **Vite**  
+- ☁️ Backend support with **Supabase**  
+- 🛠️ Modular code structure for easy customization  
 
 ---
 
 ## 🖥️ Demo
 
-![Gantt Chart Screenshot](public/image.png)
+![Gantt Chart Screenshot](./public/image.png)
 
 ---
 
 ## 📂 Project Structure
 
 ```
-.
-├── index.html       # Main HTML structure
-├── style.css        # Styling for the Gantt Chart
-├── script.js        # JavaScript functionality
-└── README.md        # Project documentation
-```
+
+gantt-tree-hub/
+├── public/                  # Public assets (images, icons, static files)
+│   └── image.png            # Demo screenshot
+├── src/                     # Main source code
+│   ├── components/          # Reusable UI and feature components
+│   │   ├── Auth/            # Authentication components
+│   │   ├── GanttChart/      # Gantt chart-related components
+│   │   ├── TaskManager/     # Task management components
+│   │   ├── ui/              # Generic UI components (buttons, inputs, etc.)
+│   │   └── ProjectSelector.tsx
+│   ├── hooks/               # Custom React hooks
+│   ├── integrations/        # API or external service integrations
+│   ├── lib/                 # Utility libraries or helpers
+│   ├── pages/               # Application pages
+│   ├── types/               # TypeScript type definitions
+│   ├── utils/               # General utility functions
+│   ├── App.tsx              # Root React component
+│   ├── App.css              # Global styles for App
+│   ├── index.css            # Global CSS styles
+│   └── vite-env.d.ts        # Vite TypeScript environment declarations
+├── supabase/                # Supabase configuration & setup
+├── .env                     # Environment variables
+├── index.html               # Main HTML entry point
+├── components.json          # Component config (shadcn/ui, etc.)
+├── package.json             # Project dependencies & scripts
+├── package-lock.json        # Dependency lockfile
+├── bun.lockb                # Bun package manager lockfile
+├── eslint.config.js         # ESLint configuration
+└── README.md                # Project documentation
+
+````
 
 ---
 
 ## 🛠️ Installation & Usage
 
-1. Clone the repository:
+1. **Clone the repository**  
    ```bash
    git clone https://github.com/vanshika20006/Gantt-Chart.git
-   ```
-2. Navigate to the project folder:
-   ```bash
    cd Gantt-Chart
+````
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
    ```
-3. Open `index.html` in your browser to view the Gantt Chart.  
+
+   or if using bun:
+
+   ```bash
+   bun install
+   ```
+
+3. **Setup environment variables**
+   Create a `.env` file and configure your **Supabase keys**.
+
+4. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open in browser → `http://localhost:5173`
 
 ---
 
 ## 📸 Screenshots
 
-👉 *Add screenshots of your Gantt Chart here to give users a quick preview!*
+👉 Example Gantt Chart view:
 
+![Gantt Chart Screenshot](./public/image.png)
+
+---
+
+## 📖 What is a Gantt Chart?
+
+A **Gantt Chart** is a project management tool that visually represents tasks over time.
+Each task is shown as a horizontal bar with:
+
+* **Start and end dates**
+* **Duration of work**
+* **Dependencies between tasks**
+
+This helps teams plan, schedule, and track progress efficiently.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues](https://github.com/vanshika20006/Gantt-Chart/issues) page.
+Contributions, issues, and feature requests are welcome!
+Check the [issues](https://github.com/vanshika20006/Gantt-Chart/issues) page.
 
 ---
 
 ## 🧑‍💻 Author
 
-- **Vanshika**  
+* **Vanshika**
   🔗 [GitHub Profile](https://github.com/vanshika20006)
 
 ---
@@ -82,4 +144,4 @@ This project is licensed under the **MIT License** – feel free to use, modify,
 
 ```
 
-Would you like me to also **add a section explaining how Gantt charts work** (for beginners who might not know what they are), or keep the README focused just on the project?
+
